@@ -186,7 +186,7 @@ async function walk(src, dst, filter, depth = 0) {
 
 let [url, token] = ['', ''];
 async function main() {
-    const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+    const config = JSON.parse(fs.readFileSync('./backup.config.json', 'utf8'));
     url = config.server;
     token = config.token;
 
