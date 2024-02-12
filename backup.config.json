@@ -1,0 +1,14 @@
+{
+    "server": "http://192.168.1.210:5244",
+    "token": "alist-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "copy": [
+        {
+            "from": "/NAS",
+            "to": "/移动云盘/Synology",
+            "filter": [
+                "#recycle",
+                "@eaDir"
+            ]
+        }
+    ]
+}
