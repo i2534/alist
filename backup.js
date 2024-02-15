@@ -14,7 +14,10 @@ Date.prototype.format = function () {
     return year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
 }
 
-console.log = console.log.bind(console, new Date().format() + ' -');
+const raw = Function.prototype.bind.call(console.log, console);
+console.log = function () {
+    raw.apply(console, [new Date().format(), '-'].concat(Array.from(arguments)));
+};
 
 const api = Object.freeze({
     //https://alist.nn.ci/zh/guide/api/fs.html
