@@ -1,0 +1,15 @@
+{
+    "webhook": {
+        "url": "https://oapi.dingtalk.com/robot/send?access_token=XXXXXXXXXXXXXXXXXXXXXX",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": {
+            "msgtype": "text",
+            "text": {
+                "content": "Notify: {message}"
+            }
+        }
+    }
+}
